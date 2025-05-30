@@ -1,6 +1,7 @@
 ''' Executing this function initiates the application of emotion detection 
     to be executed over the Flask channel and deployed on localhost:5000.
 '''
+
 from flask import Flask, request, render_template
 from EmotionDetection.emotion_detection import emotion_detector
 
@@ -30,7 +31,7 @@ def emot_detector():
         response_text = response_text + f" The dominant emotion is <b>{dominant_value}</b>."
         return response_text
 
-    return f"Invalid input: {text_to_analyze}! Try again."
+    return "Invalid text! Please try again!"
 
 @app.route("/")
 def render_index_page():
