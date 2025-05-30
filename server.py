@@ -1,7 +1,6 @@
 ''' Executing this function initiates the application of emotion detection 
     to be executed over the Flask channel and deployed on localhost:5000.
 '''
-
 from flask import Flask, request, render_template
 from EmotionDetection.emotion_detection import emotion_detector
 
@@ -41,6 +40,5 @@ def render_index_page():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    ''' This functions executes the flask app and deploys it on localhost:5000
-    '''
+    # This code executes the flask app and deploys it on localhost:5000
     app.run(host="0.0.0.0", port=5000)
